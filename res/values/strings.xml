@@ -2,6 +2,8 @@
 <resources>
 
     <string name="hello">Hello World, JobListActivity!</string>
-    <string name="app_name">express-board-android</string>
+    <string name="app_name">eXpress Jobs</string>
+    <string name="job_list_title">"<![CDATA[e<font color="#cb4129">X</font>press <font color="#cb4129">J</font>obs]]>"</string>
 
+    
 </resources>
