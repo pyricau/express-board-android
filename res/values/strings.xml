@@ -2,8 +2,24 @@
 <resources>
 
     <string name="hello">Hello World, JobListActivity!</string>
-    <string name="app_name">eXpress Jobs</string>
-    <string name="job_list_title">"<![CDATA[e<font color="#cb4129">X</font>press <font color="#cb4129">J</font>obs]]>"</string>
+    <string name="app_name">eXpress JobZ</string>
+    <string name="job_list_title">"<![CDATA[e<font color="#cb4129">X</font>press <font color="#cb4129">J</font>ob<font color="#cb4129">Z</font>]]>"</string>
 
+    <string name="job_download_error">Impossible de télécharger la liste des offres, veuillez réessayer</string>
+
+    <string name="refresh">Rafraîchir</string>
+
+    <string name="about">À propos</string>
+    
+	<string name="about_text">"<![CDATA[e<font color="#cb4129">X</font>press <font color="#cb4129">J</font>ob<font color="#cb4129">Z</font> est une application affichant les offres d'emploi publiées sur l'<a href="http://express-board.fr">eXpress-Board</a>, un service créé par <a href="http://www.touilleur-express.fr">Nicolas Martignole</a>.<br />
+	    
+	    <br />Cette application a été développée par <a href="http://www.piwai.info">Pierre-Yves Ricau</a>, et est disponible sous license Open Source sur <a href="https://github.com/pyricau/express-board-android">GitHub</a>.<br />
+	    
+	    <br />L'application e<font color="#cb4129">X</font>press <font color="#cb4129">J</font>ob<font color="#cb4129">Z</font> n'a aucun lien avec la société Innoteria, qui édite l'<a href="http://express-board.fr">eXpress-Board</a>.
+	    ]]>"</string>
+    
+	<string name="jobs_updated">Offres mises à jour</string>
+    
+	<string name="downloading">Téléchargement en cours…</string>
     
 </resources>
