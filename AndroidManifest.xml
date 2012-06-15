@@ -14,6 +14,7 @@
         android:targetSdkVersion="14" />
 
     <application
+        android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.ExpressJobs" >
@@ -28,7 +29,7 @@
         </activity>
         <activity
             android:name="info.piwai.expressboard.android.AboutActivity_"
-             android:label="@string/about"
+            android:label="@string/about"
             android:theme="@style/Theme.Sherlock.Light.Dialog" />
     </application>
 
