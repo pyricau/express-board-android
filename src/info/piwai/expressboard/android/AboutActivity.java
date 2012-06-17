@@ -19,7 +19,6 @@ public class AboutActivity extends SherlockActivity {
 	@AfterViews
 	void initLayout() {
 		aboutText.setMovementMethod(LinkMovementMethod.getInstance());
-		// aboutText.setLinkTextColor(Color.parseColor("#33B5E5"));
 	}
 
 }
