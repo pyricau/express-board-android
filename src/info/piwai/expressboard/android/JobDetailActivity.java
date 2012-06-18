@@ -136,11 +136,6 @@ public class JobDetailActivity extends SherlockActivity implements EllipsizeList
 	}
 
 	@OptionsItem
-	void aboutSelected() {
-		AboutActivity_.intent(this).start();
-	}
-
-	@OptionsItem
 	void homeSelected() {
 		finish();
 	}

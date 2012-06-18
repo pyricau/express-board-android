@@ -6,10 +6,5 @@
         android:actionProviderClass="com.actionbarsherlock.widget.ShareActionProvider"
         android:showAsAction="always"
         android:title="@string/action_bar_share_with"/>
-    <item
-        android:id="@+id/about"
-        android:icon="@drawable/ic_menu_info_details"
-        android:showAsAction="ifRoom|withText"
-        android:title="@string/about"/>
 
 </menu>
