@@ -31,6 +31,12 @@
             android:name="info.piwai.expressboard.android.AboutActivity_"
             android:label="@string/about"
             android:theme="@style/Theme.Sherlock.Light.Dialog" />
+        <activity
+            android:name="info.piwai.expressboard.android.DetailsActivity_"
+            android:theme="@style/Theme.Sherlock.Light.Dialog" />
+        <activity
+            android:name="info.piwai.expressboard.android.JobDetailActivity_"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>

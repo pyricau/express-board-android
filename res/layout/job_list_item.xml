@@ -20,6 +20,7 @@
 
     <TextView
         android:id="@+id/company"
+        style="@style/InnerShadowListItemText.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -27,23 +28,16 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="10dp"
         android:layout_toLeftOf="@id/postedAt"
-        android:gravity="left"
-        android:layerType="software"
-        android:textColor="#996e44"
-        android:textSize="26dp"
-        android:textStyle="bold" />
+        android:gravity="left" />
 
     <TextView
         android:id="@+id/title"
+        style="@style/InnerShadowListItemText.Title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/company"
         android:layout_marginTop="10dp"
-        android:gravity="left"
-        android:layerType="software"
-        android:textColor="#cb4129"
-        android:textSize="24dp"
-        android:textStyle="bold" />
+        android:gravity="left" />
 
     <TextView
         android:id="@+id/tags"

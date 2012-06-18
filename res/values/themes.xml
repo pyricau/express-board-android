@@ -7,8 +7,8 @@
     </style>
 
     <style name="Widget.Styled.ActionBar" parent="Widget.Sherlock.Light.ActionBar.Solid.Inverse">
-        <item name="background">@drawable/bg_striped</item>
-        <item name="android:background">@drawable/bg_striped</item>
+        <item name="background">@drawable/bg_striped_dark</item>
+        <item name="android:background">@drawable/bg_striped_dark</item>
     </style>
 
 </resources>

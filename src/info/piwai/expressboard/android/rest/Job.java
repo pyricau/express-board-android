@@ -15,7 +15,9 @@ public class Job implements Serializable {
 
 	public String url;
 
-	public String companyUrl;
+	public String company_url;
+
+	public String contract_code;
 
 	public String contract;
 
@@ -24,6 +26,12 @@ public class Job implements Serializable {
 	public String city;
 
 	public String area;
+
+	public String salary;
+
+	public String experience;
+
+	public String instructions;
 
 	@JsonDeserialize(using = CustomJsonDateDeserializer.class)
 	public String postedAt;

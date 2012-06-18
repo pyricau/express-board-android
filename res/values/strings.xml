@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World, JobListActivity!</string>
     <string name="app_name">eXpress JobZ</string>
-    <string name="job_list_title">"<![CDATA[e<font color="#cb4129">X</font>press <font color="#cb4129">J</font>ob<font color="#cb4129">Z</font>]]>"</string>
 
+    <string name="job_list_title">"<![CDATA[e<font color="#cb4129">X</font>press <font color="#cb4129">J</font>ob<font color="#cb4129">Z</font>]]>"</string>
+    
+    <string name="job_detail_title">"<![CDATA[<font color="#cb4129">J</font>ob <font color="#cb4129">D</font>etail<font color="#cb4129">Z</font>]]>"</string>
+    
     <string name="job_download_error">Impossible de télécharger la liste des offres, veuillez réessayer</string>
 
     <string name="refresh">Rafraîchir</string>
@@ -21,5 +23,31 @@
 	<string name="jobs_updated">Offres mises à jour</string>
     
 	<string name="downloading">Téléchargement en cours…</string>
+	
+	<string name="action_bar_share_with">Partager via…</string>
+	
+	<string name="share_job">"Une offre d'emploi sympa : "</string>
+	
+	<string name="experience">Expérience</string>
+	
+	<string name="experience_prefix">"Expérience : "</string>
+	
+	<string name="salary">Salaire</string>
+	
+	<string name="salary_prefix">"Salaire : "</string>
+	
+	<string name="contract">Contrat</string>
+	
+	<string name="location">Lieu</string>
+	
+	<string name="offer">Offre</string>
+	
+	<string name="no_experience">Expérience non précisée</string>
+	
+	<string name="no_salary">Salaire non précisé</string>
+	
+	<string name="no_contract">Contrat non précisé</string>
+	
+	<string name="no_location">Lieu non précisé</string>
     
 </resources>
