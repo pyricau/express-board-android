@@ -23,6 +23,7 @@
     <item android:drawable="@drawable/bg_striped_dark" android:state_focused="true" android:state_pressed="true"/>
     <item android:drawable="@drawable/bg_striped_dark" android:state_focused="false" android:state_pressed="true"/>
     <item android:drawable="@drawable/bg_striped_dark" android:state_focused="true"/>
+    <item android:drawable="@drawable/bg_striped_light_with_dark_stroke" android:state_enabled="true"/>
     <item android:drawable="@drawable/bg_striped_light"/>
 
 </selector>
