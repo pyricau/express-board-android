@@ -1,7 +1,9 @@
 package info.piwai.expressboard.android;
 
 import info.piwai.expressboard.android.rest.Job;
-import info.piwai.expressboard.android.rest.JobsResponse;
+
+import java.util.List;
+
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,16 +18,16 @@ public class JobAdapter extends BaseAdapter {
 	@RootContext
 	Context context;
 
-	private JobsResponse jobsResponse;
+	private List<Job> jobs;
 
 	@Override
 	public int getCount() {
-		return jobsResponse == null ? 0 : jobsResponse.jobs.size();
+		return jobs == null ? 0 : jobs.size();
 	}
 
 	@Override
 	public Job getItem(int position) {
-		return jobsResponse.jobs.get(position);
+		return jobs.get(position);
 	}
 
 	@Override
@@ -49,8 +51,8 @@ public class JobAdapter extends BaseAdapter {
 		return jobItemView;
 	}
 
-	public void updateJobs(JobsResponse jobsResponse) {
-		this.jobsResponse = jobsResponse;
+	public void updateJobs(List<Job> jobs) {
+		this.jobs = jobs;
 		notifyDataSetChanged();
 	}
 

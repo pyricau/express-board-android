@@ -45,10 +45,10 @@ public class JobListItem extends FrameLayout {
 
 	public void update(Job job) {
 		title.setText(job.title);
-		postedAt.setText(job.postedAt);
+		postedAt.setText(job.publishedAtString);
 		company.setText(job.company);
 
-		tags.setText(job.getTagsAsString());
+		tags.setText(job.tagsAsHtml());
 
 	}
 

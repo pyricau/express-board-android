@@ -2,7 +2,9 @@ package info.piwai.expressboard.android;
 
 import info.piwai.expressboard.android.rest.Job;
 import info.piwai.expressboard.android.rest.JobsDownloadTask;
-import info.piwai.expressboard.android.rest.JobsResponse;
+
+import java.util.List;
+
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
@@ -40,7 +42,7 @@ public class JobListActivity extends SherlockActivity {
 	JobsDownloadTask downloadTask;
 
 	@NonConfigurationInstance
-	JobsResponse jobsResponse;
+	List<Job> jobs;
 
 	@ViewById
 	ListView jobList;
@@ -65,8 +67,8 @@ public class JobListActivity extends SherlockActivity {
 
 		jobList.setAdapter(adapter);
 
-		if (jobsResponse != null) {
-			adapter.updateJobs(jobsResponse);
+		if (jobs != null) {
+			adapter.updateJobs(jobs);
 			emptyList.setVisibility(View.GONE);
 		} else {
 			emptyList.setVisibility(View.VISIBLE);
@@ -75,7 +77,7 @@ public class JobListActivity extends SherlockActivity {
 		if (downloadTask.isDownloading()) {
 			setSupportProgressBarIndeterminateVisibility(true);
 		} else {
-			if (jobsResponse == null) {
+			if (jobs == null) {
 				downloadJobs();
 			} else {
 				setSupportProgressBarIndeterminateVisibility(false);
@@ -116,10 +118,10 @@ public class JobListActivity extends SherlockActivity {
 		actionBar.setDisplayShowCustomEnabled(true);
 	}
 
-	public void onJobsDownloaded(JobsResponse result) {
+	public void onJobsDownloaded(List<Job> result) {
 		emptyList.setVisibility(View.GONE);
 		Toast.makeText(this, R.string.jobs_updated, Toast.LENGTH_SHORT).show();
-		jobsResponse = result;
+		jobs = result;
 		adapter.updateJobs(result);
 		setSupportProgressBarIndeterminateVisibility(false);
 		invalidateOptionsMenu();
@@ -130,7 +132,7 @@ public class JobListActivity extends SherlockActivity {
 		Toast.makeText(this, R.string.job_download_error, Toast.LENGTH_LONG).show();
 		setSupportProgressBarIndeterminateVisibility(false);
 		invalidateOptionsMenu();
-		if (jobsResponse == null) {
+		if (jobs == null) {
 			emptyList.setText(R.string.job_download_error);
 		}
 	}

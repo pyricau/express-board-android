@@ -1,47 +1,45 @@
 package info.piwai.expressboard.android.rest;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
-
-import org.codehaus.jackson.map.annotate.JsonDeserialize;
 
 import android.text.Html;
 
-public class Job implements Serializable {
-
+public class Job implements Serializable, Comparable<Job> {
 	private static final long serialVersionUID = 1L;
 
 	public String title;
 
 	public String url;
 
-	public String company_url;
-
-	public String contract_code;
+	public String companyUrl;
 
 	public String contract;
 
 	public String company;
 
-	public String city;
+	public String location;
 
-	public String area;
+	public Date publishedAtdate;
+
+	public String publishedAtString;
 
 	public String salary;
 
 	public String experience;
 
-	public String instructions;
-
-	@JsonDeserialize(using = CustomJsonDateDeserializer.class)
-	public String postedAt;
-
 	public List<String> tags;
 
-	private transient CharSequence tagsAsString;
+	private transient CharSequence tagsAsHtml;
 
-	public CharSequence getTagsAsString() {
-		if (tagsAsString == null) {
+	@Override
+	public int compareTo(Job another) {
+		return another.publishedAtdate.compareTo(publishedAtdate);
+	}
+
+	public CharSequence tagsAsHtml() {
+		if (tagsAsHtml == null) {
 			StringBuilder sb = new StringBuilder();
 			boolean first = true;
 			for (String tag : tags) {
@@ -54,9 +52,9 @@ public class Job implements Serializable {
 				sb.append(tag);
 				sb.append("</font>");
 			}
-
-			tagsAsString = Html.fromHtml(sb.toString());
+			tagsAsHtml = Html.fromHtml(sb.toString());
 		}
-		return tagsAsString;
+		return tagsAsHtml;
 	}
+
 }

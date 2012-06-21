@@ -8,16 +8,20 @@
     <string name="job_detail_title">"<![CDATA[<font color="#cb4129">J</font>ob <font color="#cb4129">D</font>etail<font color="#cb4129">Z</font>]]>"</string>
     
     <string name="job_download_error">Impossible de télécharger la liste des offres, veuillez réessayer</string>
+    
+    <string name="express_download_error">"Impossible de télécharger les offres de l'eXpress Board"</string>
+    
+    <string name="human_download_error">Impossible de télécharger les offres de Human Coders</string>
 
     <string name="refresh">Rafraîchir</string>
 
     <string name="about">À propos</string>
     
-	<string name="about_text">"<![CDATA[e<font color="#cb4129">X</font>press <font color="#cb4129">J</font>ob<font color="#cb4129">Z</font> est une application affichant les offres d'emploi publiées sur l'<a href="http://express-board.fr">eXpress-Board</a>, un service créé par <a href="http://www.touilleur-express.fr">Nicolas Martignole</a>.<br />
+	<string name="about_text">"<![CDATA[e<font color="#cb4129">X</font>press <font color="#cb4129">J</font>ob<font color="#cb4129">Z</font> est une application affichant les offres d'emploi publiées sur l'<a href="http://express-board.fr">eXpress-Board</a> et sur <a href="http://jobs.humancoders.com">Jobs Human CODERS</a>.<br />
 	    
 	    <br />Cette application a été développée par <a href="http://www.piwai.info">Pierre-Yves Ricau</a>, et est disponible sous license Open Source sur <a href="https://github.com/pyricau/express-board-android">GitHub</a>.<br />
 	    
-	    <br />L'application e<font color="#cb4129">X</font>press <font color="#cb4129">J</font>ob<font color="#cb4129">Z</font> n'a aucun lien avec la société Innoteria, qui édite l'<a href="http://express-board.fr">eXpress-Board</a>.
+	    <br />N'hésitez pas à donner une bonne note sur le <a href="market://details?id=info.piwai.expressboard.android">Play Store</a>, vous recevrez plein de bisous en retour.
 	    ]]>"</string>
     
 	<string name="jobs_updated">Offres mises à jour</string>
@@ -41,8 +45,6 @@
 	<string name="location">Lieu</string>
 	
 	<string name="offer">Offre</string>
-	
-	<string name="no_experience">Expérience non précisée</string>
 	
 	<string name="no_salary">Salaire non précisé</string>
 	

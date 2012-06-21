@@ -69,17 +69,26 @@ public class JobDetailActivity extends SherlockActivity implements EllipsizeList
 		UiUtils.addTextInnerShadow(location);
 		UiUtils.addTextInnerShadow(company);
 
-		experience.setEllipsizeListener(this);
 		salary.setEllipsizeListener(this);
 		contract.setEllipsizeListener(this);
 		location.setEllipsizeListener(this);
 
 		company.setText(job.company);
 
-		experience.setText(isEmpty(job.experience) ? getString(R.string.no_experience) : getString(R.string.experience_prefix) + job.experience);
+		if (isEmpty(job.companyUrl)) {
+			company.setEnabled(false);
+		}
+
+		if (isEmpty(job.experience)) {
+			experience.setText(job.title);
+		} else {
+			experience.setEllipsizeListener(this);
+			experience.setText(getString(R.string.experience_prefix) + job.experience);
+		}
+
 		salary.setText(isEmpty(job.salary) ? getString(R.string.no_salary) : getString(R.string.salary_prefix) + job.salary);
 		contract.setText(isEmpty(job.contract) ? getString(R.string.no_contract) : job.contract);
-		location.setText(isEmpty(job.city) ? getString(R.string.no_location) : job.city);
+		location.setText(isEmpty(job.location) ? getString(R.string.no_location) : job.location);
 
 		/*
 		 * We disable the textviews, they'll be reenabled if their content is
@@ -148,7 +157,7 @@ public class JobDetailActivity extends SherlockActivity implements EllipsizeList
 
 	@Click
 	void companyClicked() {
-		Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(job.company_url));
+		Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(job.companyUrl));
 		startActivity(intent);
 	}
 
@@ -169,7 +178,7 @@ public class JobDetailActivity extends SherlockActivity implements EllipsizeList
 
 	@Click
 	void locationClicked() {
-		showDetails(R.string.location, job.city);
+		showDetails(R.string.location, job.location);
 	}
 
 	private void showDetails(int titleId, String details) {
